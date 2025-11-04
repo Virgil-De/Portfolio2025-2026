@@ -1,0 +1,10 @@
+header nav ul {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content:end;
+    background-color: gray;
+    gap: 25px;
+    margin: 0;
+    padding: 15px;
+}
