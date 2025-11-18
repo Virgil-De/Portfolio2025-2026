@@ -9,71 +9,117 @@
 </head>
 
 <body>
- 
-    <header>
-        <div id="item1"></div>
+    <!---------------- Barre de Navigation -------------------->
+<header>
+    <div id="item1"></div>
         <nav>
-        <ul>
-            <li>BTS SIO</li>
-            <li>Profile</li>
-            <li>Mon Parcours</li>
-            <li>Compétences</li>
-            <li>Veille Informationnelle</li>
-            <li>Contacts</li>
-        </ul>
+            <ul>
+                <li>BTS SIO</li>
+                <li>Profile</li>
+                <li>Mon Parcours</li>
+                <li>Compétences</li>
+                <li>Veille Informationnelle</li>
+                <li>Contacts</li>
+            </ul>
         </nav>
-    </header>
+</header>
+    <!------------------------------------------------------->
+    
+<main>
 
-        <section id="index">
-            <div id="item2" class="partie1"></div>
-            <div id="item3" class="partie1"></div>
-            <div id="item4" class="partie1"></div>
-        </section>
+    <!---------------- Index présentation BTS -------------------->
+    <section id="index">
+        <div id="item2" class="partie1"></div>
+        <div id="item3" class="partie1"></div> <!-- Option SISR -->
+        <div id="item4" class="partie1"></div> <!-- Option SLAM -->
+          
+            <!-- fenetre modal(popup) -->
+             <div id="modal1" class="modal1">
+                <div class="modal-content">
+                    <span id="close">&times;</span>
+                    <h2 id="modal-titre"></h2>
+                    <p id="modal-description"></p>
+                </div> 
+             </div>
+       
+    </section>
+    <!------------------------------------------------------->
 
-        <section id="profil">
-            <h1>Profil</h1>
+    
+    <!---------------- Mon Profil -------------------->
+    <section id="profil">
+        <h1>Profil</h1>
             <p>Actuellement en formation BTS SIO, mon objextif est de me specialiser dans l’administration reseau et la cybersecuritee. 
                Ce pour quoi je m’oriente vers l’option SISR. 
                Je suis de nature curieux, perseverant, reactif et j’aime apprendre et perfectionner ce que je connais.</p>
-        </section>
+    </section>
+    <!------------------------------------------------------->
+    
+    
+    <!---------------- Mon Parcours -------------------->
+    <section id="parcours">
+        <h1>Mon parcours</h1>
+    </section>
 
-        <section id="parcours">
-            <h1>Mon parcours</h1>
-        </section>
+    <section id="competences">
 
-        <section id="competences">
-
-        </section>
-
-        <h1>Réalisations</h1>
+    </section>
+    <!------------------------------------------------------->
+    
+    
+    <!---------------- Mes Réalisations -------------------->
+    <h1>Réalisations</h1>
         <section id="réalisations">
             <div id="item5" class="partie2">Systèmes et Réseaux</div>
             <div id="item6" class="partie2">Développement</div>
             <div id="item7" class="partie2"></div>
             <div id="item8" class="partie2"></div>
         </section>
+    <!-------------------------------------------------------> 
 
-        <section id="veille">
-            <h1>Veille Informationnelle </h1>
-            <div id="item9"></div>
-        </section>
 
-        <section id="contacts">
-            <p>N'hesitez pas à me contacter si vous le souhaitez , via les liens ci-dessous ou par ce formulaire</p>
+    <!---------------- Veille Informationnelle -------------------->
+    <section id="veille">
+        <h1>Veille Informationnelle </h1>
+        <div id="item9"></div>
+    </section>
+    <!------------------------------------------------------->
+
+
+    <!---------------- Formulaire de contact -------------------->
+    <section id="contacts">
+        <p>N'hesitez pas à me contacter si vous le souhaitez , via les liens ci-dessous ou par ce formulaire</p>
             <div class="réseaux-S">
                 <div id="item10"></div>
                 <div id="item11"></div>
             </div>
-        </section>
+           
+
+        <form>
+            <label for="fname">Nom</label>
+                <input type="text" id="fname" name="fname" placeholder="nom"><br>
+
+            <label for="lname">Prenom</label>
+                <input type="text" id="lname" name="lname" placeholder="prénom"><br>
+
+            <label for="email">email</label>
+                <input type="text" id="email" name="email" placeholder="email"><br>
+
+            <label for="message">Votre Message</label><br>
+                <textarea id="message" name="message" rows="3" cols="33"></textarea><br>
+                
+            <input type="button" id="btn" value="send"><br>
+        </form>
+    </section>
+    <!------------------------------------------------------->
 
 
+</main>
 
-    <main>
-    </main>
+<footer>
+</footer>
 
-    <footer>
-    </footer>
-
+<script src="portfolio.js"></script>
 </body>
 
 </html>
