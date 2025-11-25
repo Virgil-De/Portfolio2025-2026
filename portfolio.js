@@ -18,15 +18,15 @@ const close =
 document.getElementById("close"); 
 
 item3.addEventListener("click", () => {  
-modalTitre.textContent = "Option SISR"; 
-modalDescription.textContent = "Solution d'infrastructure, systèmes et réseaux: Cybersécurité, serveurs, virtualisation, réseau..."; 
+modalTitre.textContent = "Solutions d'Infrastructure, Systèmes et Réseaux:"; 
+modalDescription.textContent = "Cybersécurité, Serveurs, Virtualisation, Réseau, Administration systèmes"; 
 modal.style.display="flex"; 
     
 }); 
     
 item4.addEventListener("click", () => {  
-modalTitre.textContent = "Option SLAM"; 
-modalDescription.textContent = "Solutions logicielles et applications métiers: développement web, mobile, base de donnée..."; 
+modalTitre.textContent = "Solutions logicielles et applications métiers:"; 
+modalDescription.textContent = "Développement web, Mobile, Base de donnée, Script,"; 
 modal.style.display="flex"; 
 });
 
