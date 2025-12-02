@@ -5,19 +5,26 @@ body {
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
-    color:antiquewhite
+    color:antiquewhite;
+    margin: 0;
+    padding-top: 70px;
 }
+
 /* --------Code de la barre de navigation----- */
 header {
+    position:fixed;
     display: grid; 
     grid-template-columns: auto 1fr; 
     align-items: center; 
     background-color: rgb(0, 0, 0);
     color: aliceblue;
-    min-width: 100%;
-    margin-top: 0px;
-    padding-top: 0;
-    position:fixed;
+    width: 100%;
+    padding: 0 20px 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 1000;
 }
 
 #item1{
@@ -29,20 +36,66 @@ header {
     margin: 10px;
 }
 
-header nav ul {
-    list-style: none;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content:end;
-    gap: 25px;
-    margin: 0;
+header nav ul {    
+    list-style: none;    
+    display: flex;    
+    justify-content: flex-end;    
+    gap: 25px;    
+    margin-right: 5%;    
     padding: 15px;
+} 
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor:pointer;
+    color:aliceblue;
 }
+
+@media (max-width:768px) {    
+    /* header : seulement logo + bouton */    
+    header {        
+        grid-template-columns: auto 1fr;    
+    }    /* le bouton hamburger à droite */    
+
+    .hamburger {        
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;            
+    }    /* enlever l'espace réservé à la nav dans le header */    
+    
+    nav {        
+        position: static;    
+    }    /* menu masqué par défaut */    
+    
+    nav ul {        
+        display: none !important;        
+        flex-direction: column;        
+        position: absolute;        
+        top: 70px;        
+        left: 0;        
+        width: 100%;        
+        background-color: black;        
+        gap: 15px;        
+        padding: 20px 0;        
+        text-align: center;        
+        margin: 0;    
+    }    /* menu ouvert */    
+    
+    nav ul.active {        
+        display: flex !important;  
+    }
+} 
 /* -------------------------------------- */
 
 
 /* --------Code de l'index et des deux options----- */
-#index{
+
+
+/* bare de navigation desktop */
+#bts{ 
     display: grid;
     grid-template-columns:repeat(5, 1fr);
     grid-template-rows:repeat(4, 1fr);
@@ -51,17 +104,27 @@ header nav ul {
     padding: 10px;
     gap: 20px;
 }
+/* --------------------------- */
+
+.container{
+    display: grid;
+    grid-template-columns:repeat(6, 1fr) ;
+    grid-template-rows:repeat(5, 1fr) ;
+    min-height: 100px;
+    width: 100%;  
+}
 
 .partie1{
-    min-height: 100px;
-    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #item2{
     background-image: url('images/index.jpg');
     background-size: cover;
     background-position: center; 
-    grid-column: 2 / 5;
+    grid-column: 1 / 6;
     grid-row: 1 / 4;
     border-radius: 5px;
 }
@@ -70,8 +133,9 @@ header nav ul {
     background-image: url('images/sisr.jpg');
     background-size: cover;
     background-position: center;
-    grid-column: 2;
-    grid-row: 4;
+    background-repeat: no-repeat;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -84,8 +148,9 @@ header nav ul {
     background-image: url('images/slam.jpg');
     background-size: cover;
     background-position: center;
-    grid-column: 4;
-    grid-row: 4;
+    background-repeat: no-repeat;
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -136,8 +201,8 @@ header nav ul {
 #réalisations{
     display: grid;
     grid-template-columns:repeat(2, 1fr);
-    grid-template-rows: 1fr 5fr;
-    border: solid black;
+    grid-template-rows: 1fr 4fr;
+    border: solid black 5px;
     margin: 50px 250px 50px 250px;
     margin: 0 auto;
     gap:8px;
@@ -154,29 +219,29 @@ header nav ul {
 }
 
 #item5{
+    display: flex;
     background-color: rgb(29, 29, 29, .6);
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #item6{
+    display: flex;
     background-color: rgb(29, 29, 29, .6);
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #item7{
     background-image: url('images/sisr2.png');
     background-size: cover;
     background-position: center;
-    margin:
-    
 }
 
 #item8{
     background-image: url('images/slam2.png');
     background-size: cover;
     background-position: center;
-    margin:
-    
 }
 /* ----------------------------------------------- */
 
@@ -226,3 +291,16 @@ form{
 }
 
 /* ----------------------------------------------- */
+
+
+
+/* Style des liens */
+a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+a:hover{
+    text-decoration:underline;
+    color: rgb(91, 91, 250);
+}
+/* ---------------------------- */

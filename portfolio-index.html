@@ -13,14 +13,17 @@
     <!---------------- Barre de Navigation -------------------->
 <header>
     <a href="https://www.groupesaintbenigne.fr/sb-formation-initiale/bts-services-informatiques-aux-organisations-sio/"><div id="item1"></div></a>
+        <div class="hamburger">&#9776;</div>    
+
         <nav>
             <ul>
-                <li>BTS SIO</li>
-                <li>Profile</li>
-                <li>Mon Parcours</li>
-                <li>Compétences</li>
-                <li>Veille Informationnelle</li>
-                <li>Contacts</li>
+                <li><a href="#bts">BTS SIO</a></li>
+                <li><a href="#profil">Profile</a></li>
+                <li><a href="#parcours">Mon Parcours</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#realisations">Réalisations</a></li>
+                <li><a href="#veille">Veille Informationnelle</a></li>
+                <li><a href="#contacts">Contacts</a></li>
             </ul>
         </nav>
 </header>
@@ -29,11 +32,12 @@
 <main>
 
     <!---------------- Index présentation BTS -------------------->
-    <section id="index">
+    <section id="bts">
+    <div class="partie1-container">
         <div id="item2" class="partie1"></div>
-        <div id="item3" class="partie1"></div> <!-- Option SISR -->
-        <div id="item4" class="partie1"></div> <!-- Option SLAM -->
-          
+        <div id="item3" class="partie1">SISR</div> <!-- Option SISR -->
+        <div id="item4" class="partie1">SLAM</div> <!-- Option SLAM -->
+    </div>
             <!-- fenetre modal(popup) -->
              <div id="modal1" class="modal1">
                 <div class="modal-content">
@@ -49,7 +53,7 @@
     
     <!---------------- Mon Profil -------------------->
     <section id="profil">
-        <h1>Profil</h1>
+        <h2>Profil</h2>
             <p>Actuellement en formation BTS SIO, mon objextif est de me specialiser dans l’administration reseau et la cybersecuritee. 
                Ce pour quoi je m’oriente vers l’option SISR. 
                Je suis de nature curieux, perseverant, reactif et j’aime apprendre et perfectionner ce que je connais.</p>
@@ -59,29 +63,31 @@
     
     <!---------------- Mon Parcours -------------------->
     <section id="parcours">
-        <h1>Mon parcours</h1>
+        <h2>Mon parcours</h2>
     </section>
 
     <section id="competences">
-
+        <h2>Compétences</h2>
     </section>
     <!------------------------------------------------------->
     
     
     <!---------------- Mes Réalisations -------------------->
-    <h1>Réalisations</h1>
+    <section id="realisations">
+    <h2>Réalisations</h2>
         <section id="réalisations">
             <div id="item5" class="partie2">Systèmes et Réseaux</div>
             <div id="item6" class="partie2">Développement</div>
             <div id="item7" class="partie2"></div>
             <div id="item8" class="partie2"></div>
-        </section>
+    </section>
+        
     <!-------------------------------------------------------> 
 
 
     <!---------------- Veille Informationnelle -------------------->
     <section id="veille">
-        <h1>Veille Informationnelle </h1>
+        <h2>Veille Informationnelle </h2>
         <div id="item9"></div>
     </section>
     <!------------------------------------------------------->
@@ -89,6 +95,7 @@
 
     <!---------------- Formulaire de contact -------------------->
     <section id="contacts">
+        <h2>Contacts</h2>
         <p>N'hesitez pas à me contacter si vous le souhaitez , via les liens ci-dessous ou par ce formulaire</p>
 
 

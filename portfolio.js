@@ -1,4 +1,44 @@
 
+// Navbar menu burger
+
+const hamburger =
+document.querySelector('.hamburger');
+const navMenu = 
+document.querySelector('nav ul');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+
+// --- SCROLL FLUIDE ET FERMETURE EN MOBILE ---
+const navLinks = 
+document.querySelectorAll('nav ul li a');
+
+navLinks.forEach(link => {    
+    link.addEventListener('click', 
+function(e) {        
+    e.preventDefault(); // empêche le saut instantané        
+      
+    const targetId = 
+this.getAttribute('href').substring(1);        
+    const targetSection = 
+document.getElementById(targetId);        
+       
+    targetSection.scrollIntoView({            
+        behavior: 'smooth',            
+        block: 'start'        
+    });               
+
+    if 
+(navMenu.classList.contains('active')) {            
+navMenu.classList.remove('active');        
+        }    
+    });
+}); 
+
+
+
 const item3 = 
 document.getElementById("item3"); 
 
