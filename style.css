@@ -10,6 +10,17 @@ body {
     padding-top: 70px;
 }
 
+/* decoration des section, afin de les sortir du fond */
+#cadre1 {
+   background-color: rgba(33, 8, 95, 0.367);
+}
+
+#profil {
+    background-color: rgba(7, 84, 152, 0.364);
+}
+/* -------------------------------------------------- */
+
+
 /* --------Code de la barre de navigation----- */
 header {
     position:fixed;
@@ -93,51 +104,40 @@ header nav ul {
 
 /* --------Code de l'index et des deux options----- */
 
-
-/* bare de navigation desktop */
-#bts{ 
-    display: grid;
-    grid-template-columns:repeat(5, 1fr);
-    grid-template-rows:repeat(4, 1fr);
-    border: solid black;
-    margin: 10px;
-    padding: 10px;
-    gap: 20px;
+#titre{
+    margin-top: 70px;
 }
-/* --------------------------- */
 
-.container{
-    display: grid;
-    grid-template-columns:repeat(6, 1fr) ;
-    grid-template-rows:repeat(5, 1fr) ;
-    min-height: 100px;
-    width: 100%;  
+#description{
+    margin:0px 50px 0px 50px;
+    line-height: 1.5;
+}
+
+#bts{ 
+    display: flex;
+    margin:40px;
+    padding: 20px;
+    gap: 100px;
+    justify-content: center;
 }
 
 .partie1{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
 }
 
-#item2{
-    background-image: url('images/index.jpg');
-    background-size: cover;
-    background-position: center; 
-    grid-column: 1 / 6;
-    grid-row: 1 / 4;
-    border-radius: 5px;
-}
 
 #item3{
     background-image: url('images/sisr.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 10px 10px 10px 10px black;
 }
 #item3:hover{
     transform: scale(1.05);
@@ -149,10 +149,10 @@ header nav ul {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    grid-column: 4 / 5;
-    grid-row: 4 / 5;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 10px 10px 10px 10px black;
+
 }
 
 #item4:hover{
@@ -191,7 +191,7 @@ header nav ul {
     font-size: 24px;
     cursor: pointer;
 }
-            /* ----------------- */
+    /* ----------------- */
 
 /* ------------------------------------------- */
 
