@@ -21,6 +21,13 @@ body {
 /* -------------------------------------------------- */
 
 
+
+
+
+
+
+
+
 /* --------Code de la barre de navigation----- */
 header {
     position:fixed;
@@ -100,6 +107,13 @@ header nav ul {
     }
 } 
 /* -------------------------------------- */
+
+
+
+
+
+
+
 
 
 /* --------Code de l'index et des deux options----- */
@@ -196,6 +210,158 @@ header nav ul {
 /* ------------------------------------------- */
 
 
+
+
+
+/* --------code de la partie parcours-------- */
+/* Reset basique */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+  --bg: #0f0f0f;
+  --text: #f6f6f6;
+  --muted: #bfeef7;
+  --gap: 48px;
+}
+
+
+/* Conteneur en deux colonnes */
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Colonnes */
+.column{
+  padding: 8px 16px;
+}
+
+/* Titres de colonnes */
+.column h2{
+  color: var(--muted);
+  font-size: 18px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+#psco{
+    text-align: end;
+}
+
+/* Items */
+.item{
+  margin-bottom: 28px;
+  max-width: 560px;
+}
+
+/* Alignements : gauche à gauche, droite à droite */
+.left .item { text-align: left; margin-left: 0; }
+.right .item { text-align: right; margin-right: 0; }
+
+/* Date et description */
+.date{
+  display: block;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.item p{
+  color: var(--text);
+  font-size: 15px;
+}
+
+/* Responsive : une seule colonne sur petits écrans */
+@media (max-width: 860px){
+  .container{
+    grid-template-columns: 1fr;
+    padding: 0 18px;
+  }
+
+  /* On empile : d'abord parcours pro (left), puis scolaire (right) */
+  .left, .right { padding-left: 0; padding-right: 0; }
+
+  /* Alignement du texte sur mobile : gauche pour lisibilité */
+  .left .item,
+  .right .item {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #psco{
+    text-align: left;
+  }
+
+  .column + .column { margin-top: 24px; } /* espacement entre les colonnes empilées */
+}
+
+/* Optionnel : agrandir la police sur très grands écrans */
+@media (min-width: 1400px){
+  .item p { font-size: 16px; }
+  .column h2 { font-size: 20px; }
+}
+
+/* ------------------------------------------ */
+
+
+/* -------Code de la partie Competences */
+#competences {
+    max-width: 900px;
+    margin: 50px auto;
+    color: white;
+}
+
+#competences h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: ;
+}
+
+/* Style de base */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    background: rgba(255, 255, 255, 0.05);
+    margin: 10px 0;
+    padding: 12px 18px;
+    border-left: 4px solid #55d6d6;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #competences {
+        padding: 0 15px;
+    }
+}
+/* -------------------------------------- */
+
+
+
+
+
+
+
 /* --------code de la partie réalisations-------- */
 
 #réalisations{
@@ -249,6 +415,12 @@ header nav ul {
 /* ---------code de la partie veille informationnelle */
 
 #item9{
+
+    /* Image par Oleg Gapennko sur Vecteezy.com */
+    background-image: url('images/cloud.jpeg');
+    /* ---------------------------------------- */
+    background-size: cover;
+    background-position: center;
     height: 300px;
     width: 300px;
     border: solid black;
