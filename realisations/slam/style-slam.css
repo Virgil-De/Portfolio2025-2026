@@ -1,3 +1,76 @@
-body{
-    background-color: red !important;
+/* Styles généraux de la page de réalisation */
+
+body {
+    background: linear-gradient(30deg, rgba(0, 0, 255, 0.337),rgba(128, 0, 128, 0.704));
+}
+#titre-realisations {
+    text-align: center;
+    padding: 40px 0 20px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 40px;
+}
+
+#titre-realisations a {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Style de la carte de projet */
+.projet-card {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-left: 5px solid #55d6d6; /* La couleur de votre portfolio */
+}
+
+.projet-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #55d6d6;
+}
+
+/* Utilisation de Flexbox pour la section Détails / Liens */
+.projet-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.details-section {
+    flex: 1; /* Prend l'espace disponible */
+    min-width: 300px; /* Assure que ce n'est pas trop petit */
+}
+
+/* Style des liens GitHub/Démo */
+.liens-externes a {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-github {
+    background-color: #333; /* Noir/Gris pour GitHub */
+    color: white;
+}
+.btn-github:hover {
+    background-color: #555;
+}
+
+/* Réactivité */
+@media (max-width: 768px) {
+    .projet-details {
+        flex-direction: column; /* Empiler les détails et les liens sur mobile */
+    }
+    .projet-card {
+        margin: 20px 10px;
+        padding: 20px;
+    }
 }
