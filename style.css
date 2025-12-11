@@ -331,7 +331,7 @@ header nav ul {
 }
 
 .skills-list li {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(47, 47, 47, 0.579);
     margin: 10px 0;
     padding: 12px 18px;
     border-left: 4px solid #55d6d6;
@@ -366,15 +366,21 @@ header nav ul {
 
 #réalisations{
     display: grid;
-    grid-template-columns:repeat(2, 1fr);
+    /* Conserve la disposition en grille 2x2 pour les grands écrans */
+    grid-template-columns: repeat(2, 1fr); 
     grid-template-rows: 1fr 4fr;
-    border: solid black 5px;
-    margin: 50px 250px 50px 250px;
-    margin: 0 auto;
-    gap:8px;
-    padding: 20px;
-    width: 50%;
     
+    gap: 8px;
+    padding: 20px;
+    
+    /* MODIFICATION CLÉ 1: Rendre le conteneur plus grand et plus souple */
+    /* On passe d'une width: 50% rigide à une max-width pour mieux contrôler */
+    max-width: 900px; 
+    width: 90%; /* Prend 90% de la largeur du parent, mais pas plus de 900px */
+    margin: 50px auto; /* Centre le conteneur */
+
+    /* Suppression des marges fixes : margin: 50px 250px 50px 250px; */
+    border: solid black 5px;
     background-color : hsla(260, 60%, 65%, .6);
 }
 
@@ -408,6 +414,36 @@ header nav ul {
     background-image: url('images/slam2.png');
     background-size: cover;
     background-position: center;
+}
+
+/* Responsive : Mise en page sur une colonne pour les téléphones (Largeur max 600px) */
+@media (max-width: 600px) {
+
+    #réalisations {
+        /* Empiler en une seule colonne */
+        grid-template-columns: 1fr; 
+        
+        /* Les lignes s'ajustent automatiquement (titres et images s'empilent) */
+        grid-template-rows:2fr 6fr 2fr 6fr; 
+        
+        width: 100%;
+        padding: 10px;
+        margin: 20px 0; /* Marges réduites sur mobile */
+    }
+    
+    #item5{
+        order:1;
+}
+    #item7{
+        order:2;
+}
+    #item6{
+        order:3;
+}
+    #item8{
+        order:4;
+}
+
 }
 /* ----------------------------------------------- */
 
