@@ -1,8 +1,32 @@
 /* Styles généraux de la page de réalisation */
 
 body {
-    background: linear-gradient(30deg, rgba(0, 0, 255, 0.337),rgba(128, 0, 128, 0.704));
+    /* From Vecteezy: I Nyoman Putrayana */
+    background-image:url(../../images/real.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* --------------------------------- */
+    color:antiquewhite;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+
+a{
+    text-decoration: none;
+    color: #55d6d6;
+}
+
+a:hover{
+    font-size: large;
+    color: #0091ff;
+}
+
+#navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 50px;
+}
+
 #titre-realisations {
     text-align: center;
     padding: 40px 0 20px 0;
@@ -57,11 +81,16 @@ body {
 }
 
 .btn-github {
-    background-color: #333; /* Noir/Gris pour GitHub */
-    color: white;
+    background-color: #55d6d6; /* Noir/Gris pour GitHub */
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 2px;
+
 }
 .btn-github:hover {
-    background-color: #555;
+    background-color: #000000;
+    color:  #55d6d6;
+    font-size: medium;
 }
 
 /* Réactivité */
@@ -73,4 +102,35 @@ body {
         margin: 20px 10px;
         padding: 20px;
     }
+
+    a:hover{
+    color: #0091ff;
+    font-size: medium;
+    }
+}
+
+#TP1 {
+    border-top: solid;
+    border-bottom: solid;
+    margin: 20px;
+}
+
+#TP2 {
+    border-top: solid;
+    border-bottom: solid;
+    margin: 20px;
+}
+#TP3 {
+    border-top: solid;
+    border-bottom: solid;
+    margin: 20px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 30px;
 }

@@ -59,14 +59,14 @@ document.getElementById("close");
 
 item3.addEventListener("click", () => {  
 modalTitre.textContent = "Solutions d'Infrastructure, Systèmes et Réseaux:"; 
-modalDescription.textContent = "Cybersécurité, Serveurs, Virtualisation, Réseau, Administration systèmes"; 
+modalDescription.innerHTML = "Objectif :<br> Former des professionnels capables d'assurer l'installation, la maintenance et la sécurisation des infrastructures informatiques.<br><br> Missions clés :<br> Administration des systèmes et réseaux (Windows et Linux), déploiement de services en virtualisation, par docker, gestion de la sécurité des données avec pare-feu et sécurité locale.<br><br> Compétences :<br> Maîtrise des protocoles TCP/IP, installation de services réseaux, gestion de la virtualisation, et contribution à la politique de cybersécurité de l'organisation."; 
 modal.style.display="flex"; 
     
 }); 
     
 item4.addEventListener("click", () => {  
 modalTitre.textContent = "Solutions logicielles et applications métiers:"; 
-modalDescription.textContent = "Développement web, Mobile, Base de donnée, Script,"; 
+modalDescription.innerHTML = "Objectif :<br> Former des développeurs d'applications.<br><br> Missions clés :<br> Conception, développement, test, et déploiement d'applications logicielles (web, mobiles, ou de bureau) répondant aux besoins spécifiques des utilisateurs. Gestion et administration de bases de données. Contribution à l'amélioration continue des processus métiers.<br><br> Compétences :<br> Maîtrise des langages de programmation (orientés objet, web), développement sécurisé, utilisation des frameworks et des méthodes agiles (Scrum), maitrise backend et frontend."; 
 modal.style.display="flex"; 
 });
 
@@ -133,3 +133,22 @@ if (competencesSection) {
 
 // IMPORTANT: Gardez les autres codes JS (hamburger, modale BTS SIO) si vous les avez.
 // S'il n'y a que cela, c'est bon.
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Cibler le NOUVEL ID du bouton
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    if (scrollToTopBtn) { // S'assurer que le bouton existe avant d'ajouter l'écouteur
+        scrollToTopBtn.addEventListener('click', function() {
+            // Remonter au sommet de la page en douceur
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' 
+            });
+        });
+    }
+    
+    // Assurez-vous de retirer tout l'ancien code JavaScript du bouton précédent !
+});
