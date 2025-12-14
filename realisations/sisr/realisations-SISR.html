@@ -1,73 +1,72 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réalisations SISR - Virgil Desorges</title>
     <link rel="stylesheet" href="style-sisr.css">
 </head>
+
 <body>
-    <main>
+
+    <header>
         <section id="titre-realisations">
             <h1>Projets Solutions d'Infrastructure, Systèmes et Réseaux (SISR)</h1>
-            <a href="../../index.html">← Retour a l'Accueil</a>
+            <div id="navigation">
+            <a href="../../index.html">← Retour à l'Accueil</a>
+            <a href="../slam/realisations-SLAM.html">Option SLAM →</a>
+            </div>
         </section>
+    </header>
+
+    <main>
 
         <article class="projet-card">
-            <h2>Les realisations faites jusqu'a maintenant:</h2>
+            <h2>Les réalisations faites jusqu'à maintenant :</h2>
             
             <div class="projet-details">
                 <div class="virtu">
-                    <h3>Virtualisation et Conteneurisation </h3>
+                    <h3>Virtualisation et Conteneurisation.</h3>
                     <ul>
                         <li>Hyperviseur : VirtualBox</li>
                         <li>Docker</li>
-                        <li></li>
                     </ul>
                 </div>
                 
-                <div class="details-section liens-externes">
-                    <h3>Accès aux Ressources</h3>
-                    <p>
-                        <a href="URL_DU_VOTRE_DEPOT_GITHUB" target="_blank" class="btn-github">
-                            <i class='bx bxl-github'></i> Voir le Dépôt GitHub
-                        </a>
-                    </p>
-                </div>
             </div>
 
             <div class="projet-description">
-                <h3>Travaux Pratique TP</h3>
+                <h3>Travaux Pratique TP.</h3>
                
                 <section id="TP1">
-                    <h4>Configuration complexe :</h4>
-                    <p>Mise en reseau de quatre machine virtuelles (deux clients windows et deux derveur linux) dans un reseau prive.</p>
+                    <h4>Configuration Réseau :</h4>
+                    <p>Mise en réseau de quatre machines virtuelles (deux clients Windows et deux serveurs Linux) dans un réseau privé.</p>
                     <p></p>
                 </section>
 
                 <section id="TP2">
-                    <h4>Dockerfile et Dockercompose</h4>
-                    <p>Dans ce TP, il fallait pouvoir acceder a une page web apache2 presente dans un conteneur en utilisant un serveur linux virtuel et une machine hote.</p>
-                    <p>Probleme rencontrer, le service ne restait pas actif et le conteneur s'arretait, de plus, pour acceder au service apache2, il a fallut faire du port forwarding pour pouvoir acceder a notre conteneur.</p>
-                    <p>Nous avons pu voir l'importance de la conteneurisation, qui permet un gain de temps et d'espace non negligeable. </p>
-                    <p>Mais egalement, les differente maniere de gerer ses conteneur, que ce soit par ligne de commande, par dockerfile, permettant d'automatiser l'execution d'un conteneur mais aussi, comment orchestrer nos conteneurs par docker compose, de sorte a pouvoir mettre en place des dependances entre les conteneurs et a automatiser leur deploiements</p>
+                    <h4>Dockerfile et Dockercompose :</h4>
+                    <p>Dans ce TP, il fallait pouvoir accéder à une page web Apache présente dans un conteneur en utilisant un serveur Linux virtuel et une machine hôte.</p>
+                    <p>Problèmes rencontrés, le service ne restait pas actif et le conteneur s'arrêtait. De plus, pour accéder au service Apache2, il a fallu faire du port forwarding pour pouvoir accéder à notre conteneur.</p>
+                    <p>Nous avons pu voir l'importance de la conteneurisation, qui permet un gain de temps et d'espace non négligeable.</p>
+                    <p>Mais également, les différentes manières de gérer ses conteneurs, que ce soit par ligne de commande, par dockerfile, permettant d'automatiser l'exécution d'un conteneur mais aussi, comment orchestrer nos conteneurs par docker composé, de sorte à pouvoir mettre en place des dépendances entre les conteneurs et à automatiser leur déploiement.</p>
                 
                 </section>
 
                 <section id="TP3">
-                    <h4>IP et Services Reseau</h4>
-                    <p>Ces cinq derniers mois on permis de voir la complexite des reseaux, de leur maniere de fonctionner, que ce soit par les service DNC, DHCP ou par les differentes classes d'adresse IP. </p>
-                    <p>Durant ces TP, nous pratiquons principalement par ligne de commande msdos et bash, nous avons pu voir les commandes importante lieer au reseau, nslookup, ipconfig /renew et d'autres encore.</p>
-                    <P>Au dela des commandes, nous nous penchons aussi sur les differents protocols, nous avons pu voir le protocol ARP qui permet a une machine de lier l'adresse IP a l'adresse MAC d'un autre poste via un appel general (broadcast) aui lui permet de recuperer ces informations. Apres quoi les deux machines peuvent communiquer en privee.</P>
+                    <h4>IP et Services Réseau :</h4>
+                    <p>Ces cinq derniers mois ont permis de voir la complexité des réseaux, de leur manière de fonctionner, que ce soit par les services DNC, DHCP ou par les différentes classes d'adresses IP.</p>
+                    <p>Durant ces TP, nous pratiquons principalement par ligne de commande msdos et bash. Nous avons pu voir les commandes importantes liées au réseau, Nslookup, ipconfig /renew et d'autres encore.</p>
+                    <P>Au-delà des commandes, nous nous penchons aussi sur les différents protocoles. Nous avons pu voir le protocole ARP qui permet à une machine de lier l'adresse IP à l'adresse MAC d'un autre poste via un appel général (broadcast) qui lui permet de récupérer ces informations. Après quoi les deux machines peuvent communiquer en privée.</P>
                 </section>
 
-                <h4>Les points Cles </h4>
+                <h4>Les points Clés :</h4>
                 <ul>
-                    <li>Configuration de reseau privee entre machine virtuelle</li>
-                    <li>Mise en place d'une architecture reseau</li>
-                    <li>Automatisation de conteneur via docker compose</li>
-                    <li>Ecriture de dockerfile</li>
-                    <li></li>
+                    <li>Configuration de réseau privé entre machines virtuelles.</li>
+                    <li>Mise en place d'une architecture réseau.</li>
+                    <li>Automatisation de conteneur via Docker Compose.</li>
+                    <li>Écriture de dockerfile.</li>
                 </ul>
             </div>
             
@@ -75,5 +74,10 @@
         </article>
         
         </main>
+
+        <footer>
+            <p id="mentionlegal">© 2025 DESORGES Virgil. Tous droits réservés.</p>
+            <p id="MAJ">Dernière mise à jour : 14 Décembre 2025.</p>
+        </footer>
 </body>
 </html>

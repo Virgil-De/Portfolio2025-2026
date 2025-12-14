@@ -1,26 +1,79 @@
 
+/* Importation depuis FontSquirel */
+@font-face {
+    font-family: 'amblelight';
+    src: url('../fonts/amble-light-webfont.woff2') format('woff2'),
+         url('../fonts/amble-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* Fin d'Importation */
+
+
+
 
 body {
+    font-family: 'amblelight', cursive;
     background-image: url("images/index-back2.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     color:antiquewhite;
     margin: 0;
     padding-top: 70px;
 }
 
+h1 {
+    margin:40px;
+}
+
+h2 {
+    margin-left:45px;
+    text-decoration: underline;
+}
+
 /* decoration des section, afin de les sortir du fond */
+#profil {
+    background-color: rgba(7, 84, 152, 0.364);
+}
+
 #cadre1 {
    background-color: rgba(33, 8, 95, 0.367);
 }
 
-#profil {
+
+#parcours {
     background-color: rgba(7, 84, 152, 0.364);
 }
+
+#competences {
+    background-color: rgba(33, 8, 95, 0.367);
+}
+
+#reali {
+    background-color: rgba(7, 84, 152, 0.364);
+}
+
+#veille {
+    background-color: rgba(33, 8, 95, 0.367);
+}
+
+#contacts {
+    background-color: rgba(7, 84, 152, 0.364);
+}
+
+
 /* -------------------------------------------------- */
 
-
+#profil, #cadre1, #bts, #parcours, #competences, #reali, #veille, #contacts {
+    /* La propriété clé : ajoute un padding pour laisser de la place au header */
+    padding-top: 70px; /* REMPLACER 70px par la hauteur exacte de votre HEADER */
+    
+    /* Corrige l'endroit où le scroll s'arrête */
+    scroll-margin-top: 70px; /* Doit être égal au padding-top */
+}
 
 
 
@@ -41,7 +94,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    height: 70px;
+    height: 80px;
     z-index: 1000;
 }
 
@@ -52,6 +105,7 @@ header {
     background-size: cover;
     background-position: center;
     margin: 10px;
+    border-radius: 5px;
 }
 
 header nav ul {    
@@ -70,7 +124,7 @@ header nav ul {
     color:aliceblue;
 }
 
-@media (max-width:768px) {    
+@media (max-width:999px) {    
     /* header : seulement logo + bouton */    
     header {        
         grid-template-columns: auto 1fr;    
@@ -108,9 +162,46 @@ header nav ul {
 } 
 /* -------------------------------------- */
 
+/* --------Code du profil----- */
+.bold {
+    font-weight: bold;
+}
 
 
+/* 1. Configuration du Conteneur */
+.paragraphes {
+    display: flex; /* Active Flexbox */
+    flex-direction: column; /* Organise les éléments en colonne (P1, P2, P3 empilés) */
+    
+    /* Définir une largeur maximale pour que les marges soient visibles */
+    max-width: 900px;
+    margin: 0px auto; /* Centrer le conteneur dans la page */
+    padding: 0 20px;
+}
 
+/* 2. Style des Paragraphes */
+.paragraphes p {
+    max-width: 80%; /* Limiter la largeur de chaque paragraphe à 80% */
+    line-height: 2;
+    margin-bottom: 30px; /* Espace vertical entre les paragraphes */
+    padding: 15px;
+    background-color: #16161647; /* Ajouter un fond léger pour les démarquer */
+    border-radius: 8px;
+}
+
+/* 3. L'Astuce pour l'Alignement Droit (P2) */
+#p2 {
+    /* La propriété clé : pousse l'élément P2 le plus à droite possible */
+    margin-left: auto; 
+}
+
+/* 4. Le P1 et P3 (Alignement Gauche par défaut) */
+/* Ils sont déjà alignés à gauche par défaut de Flexbox, mais nous confirmons la marge */
+#p1, #p3 {
+    margin-right: auto;
+    /* margin-left: 0; n'est pas nécessaire mais peut être explicite */
+}
+/* -------------------------------------- */
 
 
 
@@ -118,19 +209,22 @@ header nav ul {
 
 /* --------Code de l'index et des deux options----- */
 
-#titre{
-    margin-top: 70px;
-}
 
-#description{
-    margin:0px 50px 0px 50px;
+.description{
+    margin:30px 200px;
     line-height: 1.5;
 }
 
+@media (max-width:768px){ 
+    .description {
+        margin: 20px;
+        line-height: 2.0;
+    }
+    
+}
 #bts{ 
     display: flex;
-    margin:40px;
-    padding: 20px;
+    padding: 20px 20px 70px 30px;
     gap: 100px;
     justify-content: center;
 }
@@ -189,22 +283,47 @@ header nav ul {
 }
 
 .modal-content{
-    background:rgb(255, 255, 255) ;
-    color:black;
-    padding: 50px;
+    background:rgb(0, 0, 0) ;
+    color:antiquewhite;
+    padding: 15px;
     border-radius: 10px;
     border-left:solid 4px rgb(80, 200, 255);
     border-right:solid 4px rgb(205, 117, 255);
     border-top:solid 4px rgb(80, 200, 255);
     border-bottom:solid 4px rgb(205, 117, 255);
-    width: 350px;
+    box-shadow: 10px 10px 100px 50px rgb(0, 0, 0);
+    width: 800px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+#modal-titre{
+    font-size: 20px;
+    text-align: left;
+    margin: 15px;
+}
+
+#modal-description {
+    line-height: 1.5;
+
 }
 
 #close{
-    float: right;
-    font-size: 24px;
+    text-align: end;
+    font-size: 34px;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .modal-content {
+        height: 550px;
+        width: 600px;
+    }
+}
+
+
+
     /* ----------------- */
 
 /* ------------------------------------------- */
@@ -214,13 +333,14 @@ header nav ul {
 
 
 /* --------code de la partie parcours-------- */
+
 /* Reset basique */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root{
   --bg: #0f0f0f;
   --text: #f6f6f6;
-  --muted: #bfeef7;
+  --muted: #397ec8;
   --gap: 48px;
 }
 
@@ -312,32 +432,42 @@ header nav ul {
 
 /* -------Code de la partie Competences */
 #competences {
-    max-width: 900px;
-    margin: 50px auto;
-    color: white;
+    color: antiquewhite;
+    padding-bottom: 70px;
 }
 
 #competences h2 {
     font-size: 28px;
     margin-bottom: 25px;
+    
+}
+
+#competences h3 {
+    margin:20px;
+    
 }
 
 
 /* Style de base */
+#type {
+    margin: 0px auto;
+    max-width: 900px;
+}
+
 .skills-list {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .skills-list li {
     background: rgba(47, 47, 47, 0.579);
-    margin: 10px 0;
+    margin-top: 10px ;
     padding: 12px 18px;
     border-left: 4px solid #55d6d6;
     border-radius: 4px;
     opacity: 0;
     transform: translateY(10px);
+    
 }
 
 /* Animation */
@@ -351,7 +481,7 @@ header nav ul {
 /* Responsive */
 @media (max-width: 600px) {
     #competences {
-        padding: 0 15px;
+        padding: 0 15px 30px;
     }
 }
 /* -------------------------------------- */
@@ -364,6 +494,10 @@ header nav ul {
 
 /* --------code de la partie réalisations-------- */
 
+#reali {
+    padding-bottom: 70px;
+}
+
 #réalisations{
     display: grid;
     /* Conserve la disposition en grille 2x2 pour les grands écrans */
@@ -372,34 +506,36 @@ header nav ul {
     
     gap: 8px;
     padding: 20px;
+    border-radius: 10px;
     
     /* MODIFICATION CLÉ 1: Rendre le conteneur plus grand et plus souple */
     /* On passe d'une width: 50% rigide à une max-width pour mieux contrôler */
     max-width: 900px; 
     width: 90%; /* Prend 90% de la largeur du parent, mais pas plus de 900px */
-    margin: 50px auto; /* Centre le conteneur */
+    margin: 0px auto; /* Centre le conteneur */
 
     /* Suppression des marges fixes : margin: 50px 250px 50px 250px; */
-    border: solid black 5px;
-    background-color : hsla(260, 60%, 65%, .6);
+    background-color : rgba(3, 23, 41, 0.712);
+    box-shadow: 0px 0px 5px 5px rgba(3, 23, 41, 0.695);
 }
 
 .partie2{
     min-height: 50px;
     width: 100%;
     background-color : hsla(260, 60%, 65%, .6);
+    border-radius: 10px;
 }
 
 #item5{
     display: flex;
-    background-color: rgb(29, 29, 29, .6);
+    background-color: rgb(1, 6, 8);
     justify-content: center;
     align-items: center;
 }
 
 #item6{
     display: flex;
-    background-color: rgb(29, 29, 29, .6);
+    background-color: rgb(1, 6, 8);
     justify-content: center;
     align-items: center;
 }
@@ -450,6 +586,31 @@ header nav ul {
 
 /* ---------code de la partie veille informationnelle */
 
+#veille {
+    padding-bottom: 70px;
+
+}
+
+#conteneur-veille-lien {
+    text-align: center;
+}
+
+
+ #lien-veille {
+    /* 1. CLÉ : Permet d'appliquer les marges et de ne prendre que la largeur du contenu */
+    display: inline-block; 
+    
+    /* 2. Style de texte (centrage) */
+    text-align: center; 
+    
+    /* 3. Marges (mieux gérées par le <a> lui-même maintenant) */
+    margin: 50px 0; /* Marge de 50px en haut/bas, 0 gauche/droite */
+    
+    /* Vous pouvez aussi le mettre en gras ou augmenter la taille de la police */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 #item9{
 
     /* Image par Oleg Gapennko sur Vecteezy.com */
@@ -459,7 +620,8 @@ header nav ul {
     background-position: center;
     height: 300px;
     width: 300px;
-    border: solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 10px rgba(255, 255, 255, 0.158);
     margin-right: auto ;
     margin-left: auto ;
 
@@ -469,9 +631,45 @@ header nav ul {
 
 /* ------Code de la partie contacts---------- */
 
-#item10 img {
-    max-width: 5%;
+.reseaux-sociaux{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
 }
+
+#item10 img {
+    max-width: 40%;
+}
+#item11 img {
+    max-width: 40%;
+}
+
+#cv {
+   text-align: center;
+   margin-bottom: 40px;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+.bouton-telechargement {
+
+    display: inline-block; 
+    
+    padding: 10px 20px;
+    
+    
+    border: solid antiquewhite;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    box-shadow: 0px 0px 10px 10px rgba(19, 2, 56, 0.266);
+    
+    
+    color: rgb(16, 10, 83);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -480,22 +678,28 @@ form{
 
 #fname{
     border-radius: 5px;
+    padding:2px;
 }
 
 #lname{
     border-radius: 5px;
+    padding:2px;
 }
 
 #email{
     border-radius: 5px;
+    padding:2px;
 }
 
 #message{
-    border-radius: 30px;
+    border-radius: 10px;
+    padding:2px;
 }
 
 #btn{
     border-radius: 5px;
+    padding:2px;
+    margin:20px;
 }
 
 /* ----------------------------------------------- */
@@ -512,3 +716,46 @@ a:hover{
     color: rgb(91, 91, 250);
 }
 /* ---------------------------- */
+
+
+
+#scrollToTopBtn {
+    /* Rendre le bouton fixe sur la fenêtre */
+    position: fixed; 
+    
+    /* Positionnement : Bas à droite */
+    bottom: 30px; 
+    right: 30px; 
+    
+    /* Affichage : TOUJOURS visible (pas de display: none;) */
+    display: block; 
+    
+    /* Style de base */
+    z-index: 1000; /* Assurez-vous qu'il est bien au-dessus de tout */
+    background-color: #053b74; /* Un bleu visible */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 16px; 
+    border-radius: 50%; /* Bouton rond */
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #0056b3;
+    color: aliceblue;
+    text-decoration: overline blue;
+}
+
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 30px;
+}
