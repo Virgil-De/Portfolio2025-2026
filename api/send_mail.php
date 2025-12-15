@@ -42,17 +42,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // La fonction mail() renvoie TRUE si l'envoi est accepté, FALSE sinon
     if (mail($destinataire, $sujet, $contenu_email, $entetes)) {
         // Redirection en cas de succès (ajustez l'URL de redirection)
-        header("Location: /contacts.html?status=success");
+        header("Location: /index.html?status=success");
         exit;
     } else {
         // Redirection en cas d'échec
-        header("Location: /contacts.html?status=error");
+        header("Location: /index.html?status=error");
         exit;
     }
 
 } else {
     // Si la page est accédée directement sans soumission du formulaire
-    header("Location: /contacts.html");
+    header("Location: /index.html");
     exit;
 }
 ?>

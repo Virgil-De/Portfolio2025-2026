@@ -47,7 +47,7 @@ a:hover{
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border-left: 5px solid #55d6d6; /* La couleur de votre portfolio */
+    border-left: 5px solid #55d6d6;
 }
 
 .projet-card h2 {
@@ -56,7 +56,7 @@ a:hover{
     color: #55d6d6;
 }
 
-/* Utilisation de Flexbox pour la section Détails / Liens */
+
 .projet-details {
     display: flex;
     justify-content: space-between;
@@ -65,28 +65,11 @@ a:hover{
 }
 
 .details-section {
-    flex: 1; /* Prend l'espace disponible */
-    min-width: 300px; /* Assure que ce n'est pas trop petit */
+    flex: 1; 
+    min-width: 300px; 
 }
 
-/* Style des liens GitHub/Démo */
-.liens-externes a {
-    display: block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
 
-.btn-github {
-    background-color: #333; /* Noir/Gris pour GitHub */
-    color: white;
-}
-.btn-github:hover {
-    background-color: #555;
-}
 
 /* Réactivité */
 @media (max-width: 768px) {
