@@ -93,31 +93,26 @@ function animateSkills(target) {
     });
 }
 
-// ----------------------------------------------------
-// Configuration de l'Intersection Observer
-// ----------------------------------------------------
 
-// La fonction de callback qui est appelée quand l'élément entre ou sort de la vue
+
 const observerCallback = (entries, observer) => {
     entries.forEach(entry => {
-        // 'entry.isIntersecting' est vrai si l'élément est dans la zone visible
+        
         if (entry.isIntersecting) {
-            // L'élément est visible, on lance l'animation
+            
             animateSkills(entry.target);
 
-            // Optionnel: Une fois l'animation lancée, on arrête d'observer l'élément
+            
             observer.unobserve(entry.target);
         }
     });
 };
 
-// Les options de l'Observer :
-// rootMargin: '0px' signifie qu'on observe l'intersection avec la limite de la fenêtre (viewport).
-// threshold: 0.1 signifie que l'élément doit être visible à 10% pour déclencher le callback.
+
 const observerOptions = {
-    root: null, // Le viewport est la zone racine
+    root: null, 
     rootMargin: '0px',
-    threshold: 0.6 // Déclenche quand 20% de la cible est visible
+    threshold: 0.6 
 };
 
 // Création de l'Observer
@@ -131,18 +126,17 @@ if (competencesSection) {
 }
 
 
-// IMPORTANT: Gardez les autres codes JS (hamburger, modale BTS SIO) si vous les avez.
-// S'il n'y a que cela, c'est bon.
+
 
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Cibler le NOUVEL ID du bouton
+    
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-    if (scrollToTopBtn) { // S'assurer que le bouton existe avant d'ajouter l'écouteur
+    if (scrollToTopBtn) { 
         scrollToTopBtn.addEventListener('click', function() {
-            // Remonter au sommet de la page en douceur
+            
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth' 
@@ -150,5 +144,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Assurez-vous de retirer tout l'ancien code JavaScript du bouton précédent !
+    
 });

@@ -1,8 +1,4 @@
 
-
-/* ================================================= */
-/* 🌐 STYLE DE BASE ET TYPOGRAPHIE                   */
-/* ================================================= */
 body{
     /* Importation from Vecteezy, auteur: "aqilah" */
     background-image: url(../images/veille.jpg);
@@ -10,39 +6,39 @@ body{
 
     background-size:cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Ajout pour un meilleur effet */
+    background-attachment: fixed; 
     color: antiquewhite; 
     margin: 0;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a {
-    pointer-events: auto !important; /* Force la réactivation du clic */
+    pointer-events: auto !important; 
     text-decoration: none;
-    color: inherit; /* Pour que les liens dans la grille héritent de la couleur body */
+    color: inherit; 
 }
 a:hover {
     text-decoration: underline;
-    color: #13ddd3; /* Couleur de la barre de navigation */
+    color: #13ddd3; 
 }
 
-/* ================================================= */
-/* ⬆️ HEADER (BARRE DE NAVIGATION)                    */
-/* ================================================= */
+
+/*  HEADER BARRE DE NAVIGATION                   */
+
 header {
     background-color: rgba(9, 2, 36, 0.552);
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Clé pour le centrage du titre */
+    justify-content: space-between; 
     padding: 15px;
     border-radius: 10px;
     margin: 15px 20px 20px 20px;
     width: auto;
 }
 
-/* Flèche et Espaceur (pour le centrage) */
+
 #sortie, #spacer {
-    min-width: 30px; /* Assurez-vous que les deux ont la même largeur */
+    min-width: 30px; 
     text-align: left;
 }
 
@@ -54,15 +50,13 @@ i {
 }
 
 header h2 {
-    /* Le h2 est centré grâce à 'justify-content: space-between' sur le parent */
+  
     text-align: center;
-    margin: 0; /* Suppression des marges qui pourraient décentrer */
-    flex-grow: 1; /* Prend l'espace disponible */
+    margin: 0; 
+    flex-grow: 1; 
 }
 
-/* ================================================= */
-/* 📝 INTRODUCTION (SECTION .intro)                  */
-/* ================================================= */
+
 .intro {
     max-width: 800px;
     margin: 30px auto;
@@ -76,12 +70,10 @@ header h2 {
     border-radius: 8px;
 }
 
-/* ================================================= */
-/* 📰 GRILLE DES ARTICLES (.grille)                   */
-/* ================================================= */
+
 .grille {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 colonnes égales par défaut */
+    grid-template-columns: 1fr 1fr; 
     grid-template-rows: auto; 
     
     background-color: rgba(0, 0, 0, 0.448);
@@ -115,7 +107,7 @@ header h2 {
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.6);
-    object-fit: cover; /* Assure que l'image couvre l'espace sans déformation */
+    object-fit: cover; 
 }
 
 /* Titres d'article */
@@ -129,13 +121,12 @@ header h2 {
 .veille-article p {
     font-size: 0.95em;
     line-height: 1.6;
-    white-space: pre-wrap; /* Conserve les sauts de ligne */
+    white-space: pre-wrap; 
 }
 
 
-/* ================================================= */
-/* 💻 MEDIA QUERY : TABLETTES (Largeur max. 992px)  */
-/* ================================================= */
+
+/* ===============Responsive max 992px================ */
 @media (max-width: 992px) {
     
     .grille {
@@ -158,9 +149,8 @@ header h2 {
 }
 
 
-/* ================================================= */
-/* 📞 MEDIA QUERY : SMARTPHONES (Largeur max. 600px) */
-/* ================================================= */
+
+/* ================Responsive max 600px================ */
 @media (max-width: 600px) {
     
     header h2 {
@@ -168,7 +158,7 @@ header h2 {
     }
     
     .grille {
-        grid-template-columns: 1fr; /* Passage à UNE SEULE colonne */
+        grid-template-columns: 1fr; 
         margin: 20px 0;
         border: none;
     }
@@ -178,13 +168,12 @@ header h2 {
         border-right: none;
     }
     
-    /* Toutes les bordures sont horizontales, sauf le dernier élément */
+    
     .veille-article {
         border-bottom: solid 1px rgba(255, 255, 255, 0.2);
         padding: 20px;
     }
     
-    /* Le dernier article n'a pas de bordure en bas */
     .grille .veille-article:last-child {
         border-bottom: none;
     }
